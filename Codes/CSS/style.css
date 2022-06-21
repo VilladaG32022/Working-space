@@ -1,23 +1,25 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --first-color: #8C3616;
-  --button-color: hsl(0, 0%, 17%);
-  --button-color-alt: hsl(0, 0%, 21%);
+  --first-color: #E8CA9E;
+  --second-color: #77B3B8;
+  --button-color: #77B3B8;
+  --button-color-alt: #003835;
   --title-color: #F2EFEB;
-  --text-color: hsl(0, 0%, 35%);
+  --title-hover-color: #003835;
+  --text-color: #F2EFEB;
   --text-color-light: hsl(0, 0%, 55%);
   --body-color: hsl(0, 0%, 99%);
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
 
   /*========== Font and typography ==========*/
-  --body-font: 'Roboto', sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -191,10 +193,15 @@ body.dark-theme {
   background-color: var(--first-color);
 }
 
+.separator {
+  background-color: var(--second-color);
+  height: 7px;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
-  background-color: #D9BCA3;
+  background-color: var(--first-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -224,6 +231,9 @@ body.dark-theme {
   display: inline-flex;
   align-items: center;
   column-gap: .25rem;
+  height: 40px;
+  width: 40px;
+  margin-left: 50px;
 }
 
 .nav__logo-icon {
@@ -271,7 +281,7 @@ body.dark-theme {
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color: var(--title-hover-color);
 }
 
 .nav__close {
@@ -302,22 +312,15 @@ body.dark-theme {
 .home__container {
   position: relative;
   row-gap: 2.5rem;
-  background-color: #8C3616;
+  height: 625px;
+  background-image: url(../Assets/Img/comedor1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .home__img {
   width: 240px;
-}
-
-.home__img-bg {
-  width: 258px;
-  height: 430px;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  justify-self: flex-end;
-  transform: translateX(1.5rem);
 }
 
 .home__social {
@@ -340,13 +343,24 @@ body.dark-theme {
 }
 
 .home__title {
+  margin-top: 50px;
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+  font-weight: var(--font-medium);
+}
+
+.home__title__bold {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-bold);
   margin-bottom: var(--mb-1);
+  font-weight: var(--font-bold);
 }
 
 .home__description {
   margin-bottom: var(--mb-1-5);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  width: 55%;
 }
 
 .home__price {
@@ -358,26 +372,37 @@ body.dark-theme {
 }
 
 .home__btns {
+  margin-top: 125px;
   display: flex;
   align-items: center;
 }
 
 .home__button {
-  box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
+  margin-right: 20px;
+  background-color: var(--button-color);
+}
+
+.home__button__two {
+  background-color: var(--button-color-alt);
 }
 
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--button-color);
+  box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
   color: #FFF;
-  padding: 1.25rem 2rem;
+  padding: 1.5rem 2.25rem;
   font-weight: var(--font-medium);
   transition: .3s;
+  border-radius: 1rem;
 }
 
 .button:hover {
   background-color: var(--button-color-alt);
+}
+
+.home__button__two:hover {
+  background-color: var(--button-color);
 }
 
 .button--gray {
