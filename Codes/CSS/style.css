@@ -6,10 +6,10 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  --first-color: hsl(31, 100%, 70%);
+  --first-color: #8C3616;
   --button-color: hsl(0, 0%, 17%);
   --button-color-alt: hsl(0, 0%, 21%);
-  --title-color: hsl(0, 0%, 15%);
+  --title-color: #F2EFEB;
   --text-color: hsl(0, 0%, 35%);
   --text-color-light: hsl(0, 0%, 55%);
   --body-color: hsl(0, 0%, 99%);
@@ -194,7 +194,7 @@ body.dark-theme {
 /*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
-  background: transparent;
+  background-color: #D9BCA3;
   position: fixed;
   top: 0;
   left: 0;
