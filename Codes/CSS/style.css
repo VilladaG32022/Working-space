@@ -302,6 +302,7 @@ body.dark-theme {
 .home__container {
   position: relative;
   row-gap: 2.5rem;
+  background-color: #8C3616;
 }
 
 .home__img {
@@ -309,7 +310,6 @@ body.dark-theme {
 }
 
 .home__img-bg {
-  background-color: var(--first-color);
   width: 258px;
   height: 430px;
   padding-bottom: 2rem;
