@@ -9,8 +9,8 @@
   --first-color: #E8CA9E;
   --second-color: #77B3B8;
   --button-color: #77B3B8;
-  --button-color-alt: #003835;
-  --title-color: #F2EFEB;
+  --button-color-alt: rgb(0, 56, 53);
+  --title-color: rgb(242, 239, 235);
   --title-hover-color: #003835;
   --text-color: #F2EFEB;
   --text-color-light: hsl(0, 0%, 55%);
@@ -312,7 +312,6 @@ body.dark-theme {
 .home__container {
   position: relative;
   row-gap: 2.5rem;
-  height: 625px;
   background-image: url(../Assets/Img/comedor1.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -386,13 +385,39 @@ body.dark-theme {
   background-color: var(--button-color-alt);
 }
 
+/*=============== VOLUNTEERING ===============*/
+
+.volunteering__container {
+  padding: 7% 25%;
+  text-align: center;
+  row-gap: 2.5rem;
+  background-image: url(../Assets/Img/comedor1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.volunteering__description {
+  margin-bottom: var(--mb-1-5);
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.volunteering__button {
+  margin-right: 30px;
+  background-color: var(--button-color);
+  margin-bottom: 5%;
+  font-weight: var(--font-bold);
+  font-size: var(--h3-font-size);
+}
+
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
   box-shadow: 0 12px 24px hsla(0, 0%, 10%, .2);
   color: #FFF;
   padding: 1.5rem 2.25rem;
-  font-weight: var(--font-medium);
   transition: .3s;
   border-radius: 1rem;
 }
@@ -418,75 +443,32 @@ body.dark-theme {
   padding: 1rem 1.5rem;
 }
 
-/*=============== FEATURED ===============*/
-.featured__container {
-  row-gap: 2.5rem;
+/*=============== UPDATE ===============*/
+.update__card{
+  background-color: var(--second-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.featured__card {
-  position: relative;
-  text-align: center;
-  background-color: var(--container-color);
-  padding-top: 2rem;
-  border: 1px solid var(--border-color);
-  overflow-y: hidden;
-  transition: .3s;
+.update__img{
+  width: 60px;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
 }
 
-.featured__tag {
-  background-color: var(--first-color);
-  padding: .5rem 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: var(--small-font-size);
+.update__name{
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
-  position: absolute;
-  transform: rotate(-90deg);
-  left: -1rem;
-  top: 3rem;
+  margin-bottom: .25rem;
 }
 
-.featured__img {
-  height: 214px;
-  margin-bottom: var(--mb-1);
-}
-
-.featured__title, 
-.featured__price {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-bold);
-}
-
-.featured__title {
-  text-transform: uppercase;
-  margin-bottom: var(--mb-0-75);
-}
-
-.featured__price {
-  display: block;
-  color: var(--first-color);
-  transition: .3s;
-}
-
-.featured__button {
+.update__description{
   font-size: var(--small-font-size);
-  transform: translateY(1rem);
-  opacity: 0;
 }
 
-.featured__card:hover {
-  box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
-  padding: 2rem 0 3rem 0;
-}
 
-.featured__card:hover .featured__button {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.featured__card:hover .featured__price {
-  margin-bottom: var(--mb-1-5);
-}
+/*SWIPER SLLIDE*/
 
 /*=============== STORY ===============*/
 .story__container {
@@ -522,50 +504,43 @@ body.dark-theme {
   top: -3rem;
 }
 
-/*=============== PRODUCTS ===============*/
-.products__container {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+/*=============== INFO ===============*/
+
+.info__container{
+  text-align: center;
 }
 
-.products__card {
-  position: relative;
-  background-color: var(--container-color);
-  padding: 1.25rem 0;
-  border: 1px solid var(--border-color);
-  text-align: center;
-  transition: .3s;
+.info__heading {
+  margin: 0 auto 50px;
+  padding: 2.5% 10%;
+  font-size: 30px;
+  background-color: var(--button-color-alt);
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.info__box__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 400px 400px;
+  gap: 20px;
+}
+
+.info__box {
+  padding: 10px;
+  background-color:var(--second-color);
+  border-radius:10px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  font-weight: bold;
 }
 
 .products__img {
   height: 125px;
   margin-bottom: var(--mb-1);
-}
-
-.products__title, 
-.products__price {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-}
-
-.products__title {
-  text-transform: uppercase;
-  margin-bottom: var(--mb-0-5);
-}
-
-.products__price {
-  color: var(--first-color);
-}
-
-.products__button {
-  background-color: var(--button-color);
-  padding: .4rem;
-  color: #fff;
-  font-size: 1rem;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: .3s;
 }
 
 .products__button:hover {
@@ -576,109 +551,20 @@ body.dark-theme {
   box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
 }
 
-/*=============== TESTIMONIAL ===============*/
-.testimonial__container {
-  row-gap: 4rem;
+/*=============== UPDATE ===============*/
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
-.testimonial__quote {
-  display: inline-flex;
-  background-color: var(--container-color);
-  padding: .5rem .75rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-  box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
-  margin-bottom: var(--mb-2);
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--second-color);
 }
+.swiper-pagination{
 
-.testimonial__description {
-  margin-bottom: var(--mb-1);
 }
-
-.testimonial__date {
-  font-size: var(--normal-font-size);
-  margin-bottom: var(--mb-2);
-}
-
-.testimonial__perfil {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-  margin-bottom: 7rem;
-}
-
-.testimonial__perfil-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 3rem;
-}
-
-.testimonial__perfil-data {
-  display: flex;
-  flex-direction: column;
-  row-gap: .5rem;
-}
-
-.testimonial__perfil-name {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-  color: var(--title-color);
-}
-
-.testimonial__perfil-detail {
-  font-size: var(--small-font-size);
-}
-
-.testimonial__images {
-  position: relative;
-}
-
-.testimonial__img, 
-.testimonial__square {
-  width: 250px;
-}
-
-.testimonial__square {
-  height: 250px;
-  background-color: var(--first-color);
-  margin-left: auto;
-}
-
-.testimonial__img {
-  position: absolute;
-  right: 2rem;
-  top: 3rem;
-}
-
-.testimonial-swiper {
-  margin-left: initial;
-  margin-right: initial;
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  content: '';
-}
-
-/* Swiper class */
-.swiper-button-next,
-.swiper-button-prev {
-  top: initial;
-  bottom: 5%;
-  width: initial;
-  height: initial;
-  background-color: var(--container-color);
-  box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
-  padding: .25rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
-}
-
-.swiper-button-next {
-  right: initial;
-  left: 4rem;
-}
-
 /*=============== NEW ===============*/
 .new__card {
   position: relative;
@@ -788,10 +674,23 @@ body.dark-theme {
 }
 
 /*=============== FOOTER ===============*/
+
+.footer__box {
+  background-color: var(--first-color);
+  padding-top: 35px;
+}
+
 .footer__container {
-  row-gap: 2rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 3rem;
+  background-color: var(--first-color);
+  margin-bottom: 35px;
+}
+
+.footer__line {
+  height: 2px;
+  background-color: var(--button-color);
+  border: none;
+  margin: auto;
+  width: 75%;
 }
 
 .footer__title {
@@ -808,10 +707,11 @@ body.dark-theme {
 
 .footer__link {
   color: var(--text-color);
+  transition: .3s;
 }
 
 .footer__link:hover {
-  color: var(--title-color);
+  color: var(--button-color-alt);
 }
 
 .footer__social {
@@ -830,10 +730,10 @@ body.dark-theme {
 
 .footer__copy {
   display: block;
-  margin: 3.5rem 0 1rem 0;
+  padding: 20px;
   text-align: center;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--button-color-alt);
 }
 
 /*=============== SCROLL UP ===============*/
