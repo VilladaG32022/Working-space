@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
     <!--=============== BOXICONS ===============-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
     <!--=============== SWIPER CSS ===============--> 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet"href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <!--=============== ANIMATR CSS ===============-->
 
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="../CSS/style.css">
     <!--<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
@@ -32,25 +28,24 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Inicio</a>
+                    <li id="item-home" class="nav__item">
+                        <i id="icon-home" class='bx bx-home-alt nav__icon'></i>
+                        <a id="link-home" href="#home" class="nav__link nav__link-hidden">Home</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#donation" class="nav__link">Nosotros</a>
+                    <li id="item-about" class="nav__item">
+                        <i id="icon-about" class='bx bxs-user nav__icon'></i>
+                        <a id="link-about" href="#about" class="nav__link nav__link-hidden">About</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#About" class="nav__link">Contacto</a>
+                    <li id="item-volunteering" class="nav__item">
+                        <i id="icon-volunteering" class='bx bxs-spreadsheet nav__icon'></i>
+                        <a id="link-volunteering" href="#volunteering" class="nav__link nav__link-hidden">Volunteer</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#update" class="nav__link">Noticias</a>
+                    <li id="item-update" class="nav__item">
+                        <i id="icon-update" class='bx bxs-news nav__icon' ></i>
+                        <a id="link-update" href="#update" class="nav__link  nav__link-hidden">News</a>
                     </li>
                 </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x' ></i>
-                </div>
             </div>
-                </div>
             </div>
         </nav>
         <div class="separator"></div>
@@ -84,8 +79,9 @@
         <!--==================== UPDATE ====================-->
         <section class="update section " id="update">
 
-            <div class="update__container container mySwiper">
+            <div class="update__container container swiper mySwiper">
                 <div class="swiper-wrapper">
+
                     <div class="update__card swiper-slide">
                         <img src="../Assets/Img/pic01.jpg" alt="" class="update__img">
         
@@ -129,12 +125,11 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-
         </section>
-
-
+        
+        
         <!--=====================VOLUNTEERING========================-->
-
+        
         <div class="separator"></div>
         <section class="volunteering" id="volunteering">
             <div class="volunteering__container">
@@ -152,8 +147,8 @@
         </section>
         <div class="separator"></div>
 
-        <!--==================== PRODUCTS ====================-->
-        <section class="products section container" id="products">
+        <!--==================== INFORMATION ====================-->
+        <section class="info section container" id="about">
 
             <div class="info__container">
                 <h1 class="info__heading">¿QUIENES SOMOS?</h1>
@@ -187,6 +182,24 @@
         </section>
     </main>
 
+    <!--=====================DONATION========================-->
+
+    <section class="donation" id="donation">
+        <div class="separator"></div>
+            <div class="donation__container">
+                <div class="donation__data"></div>
+                    <a href="#" class="button donation__button" id="button_one">
+                            DONA
+                    </a>
+                    <p class="volunteering__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        <div class="separator"></div>
+    </section>
     <!--==================== FOOTER ====================-->
     <footer class="footer section">
         <div class="separator"></div>
@@ -251,7 +264,6 @@
             <span class="footer__copy">&#169; 2022  ~  Cocinamos por los Niños</span>
         </div>
     </footer>
-
     <!--=============== SCROLL UP ===============-->
     <a href="#" class="scrollup" id="scroll-up"> 
         <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
@@ -261,17 +273,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
-    <script src="../JS/inicio#index.js"></script>
-    
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
-      </script>
+    <script src="../JS/main.js"></script>
 </body>
 </html>

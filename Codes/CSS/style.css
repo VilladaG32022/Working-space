@@ -236,8 +236,19 @@ body.dark-theme {
   margin-left: 50px;
 }
 
-.nav__logo-icon {
+.nav__logo-icon,
+.nav__icon {
   font-size: 1.25rem;
+}
+
+.nav__icon{
+  text-align: center;
+
+}
+
+.nav__icon:hover{
+  color: var(--title-hover-color);
+  transition: .4s all;
 }
 
 .nav__btns {
@@ -274,16 +285,22 @@ body.dark-theme {
 
 .nav__link {
   color: var(--title-color);
+  display: inline-block;
   font-weight: var(--font-medium);
   text-transform: uppercase;
   font-size: var(--h2-font-size);
   transition: .3s;
 }
 
-.nav__link:hover {
-  color: var(--title-hover-color);
+.nav__link-hidden {
+  visibility: hidden;
+  transition: .3s;
 }
 
+.nav__link:hover::after {
+  color: var(--title-hover-color);
+  display: inline-block;
+}
 .nav__close {
   font-size: 2rem;
   position: absolute;
@@ -560,86 +577,30 @@ body.dark-theme {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: var(--second-color);
-}
-.swiper-pagination{
+  background: var(--button-color);
 
-}
-/*=============== NEW ===============*/
-.new__card {
-  position: relative;
-  text-align: center;
-  background-color: var(--container-color);
-  padding-top: 2rem;
-  border: 1px solid var(--border-color);
-  overflow-y: hidden;
-  transition: .3s;
-}
-
-.new__tag {
-  background-color: var(--first-color);
-  padding: .5rem 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  transition: .3s;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.new__img {
-  height: 215px;
-  margin-bottom: var(--mb-1);
-}
-
-.new__title, 
-.new__price {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-bold);
-}
-
-.new__title {
-  text-transform: uppercase;
-  margin-bottom: var(--mb-0-75);
-}
-
-.new__price {
+.swiper-slide img {
   display: block;
-  color: var(--first-color);
-  transition: .3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.new__button {
-  font-size: var(--small-font-size);
-  transform: translateY(1rem);
-  opacity: 0;
-}
-
-.new__card:hover {
-  background-color: var(--first-color);
-  box-shadow: 0 12px 32px hsla(0, 0%, 20%, .1);
-  padding: 2rem 0 3rem 0;
-}
-
-.new__card:hover .new__tag {
-  background-color: var(--button-color);
-}
-
-.new__card:hover .new__button {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.new__card:hover .new__title {
-  color: hsl(0, 0%, 15%);
-}
-
-.new__card:hover .new__price {
-  color: hsl(0, 0%, 15%);
-  margin-bottom: var(--mb-1-5);
-}
 
 /*=============== NEWSLETTER ===============*/
 .newsletter__bg {
@@ -672,6 +633,35 @@ body.dark-theme {
   padding: 1.25rem 1rem;
   color: hsl(0, 0%, 15%);
 }
+/*=============== VOLUNTEERING ===============*/
+
+.donation__container {
+  padding: 7% 25%;
+  text-align: center;
+  row-gap: 2.5rem;
+  background-image: url(../Assets/Img/comedor1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.donation__description {
+  margin-bottom: var(--mb-1-5);
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.donation__button {
+  margin-right: 30px;
+  background-color: var(--button-color);
+  margin-bottom: 5%;
+  font-weight: var(--font-bold);
+  font-size: var(--h3-font-size);
+}
+
+
+
 
 /*=============== FOOTER ===============*/
 
