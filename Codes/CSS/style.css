@@ -14,7 +14,7 @@
   --title-hover-color: #003835;
   --text-color: #F2EFEB;
   --text-color-light: hsl(0, 0%, 55%);
-  --body-color: hsl(0, 0%, 99%);
+  --body-color: hsl(0, 22%, 90%);
   --container-color: #fff;
   --border-color: hsl(0, 0%, 94%);
 
@@ -106,51 +106,6 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
-}
-
-/*=============== THEME ===============*/
-/*========== Variables Dark theme ==========*/
-body.dark-theme {
-  --first-color: hsl(31, 76%, 74%);
-  --button-color: hsl(0, 0%, 24%);
-  --button-color-alt: hsl(0, 0%, 28%);
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(0, 0%, 12%);
-  --container-color: hsl(0, 0%, 16%);
-  --border-color: hsl(0, 0%, 20%);
-}
-
-/*========== Button Dark/Light ==========*/
-.change-theme {
-  color: var(--title-color);
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
-==========*/
-.dark-theme .change-theme,
-.dark-theme .nav__toggle,
-.dark-theme .nav__shop,
-.dark-theme .button--gray {
-  color: hsl(0, 0%, 15%);
-}
-
-.dark-theme .scroll-header {
-  box-shadow: 0 1px 4px hsla(0, 0%, 4%, .3);
-}
-
-.scroll-header .change-theme,
-.scroll-header .nav__toggle,
-.scroll-header .nav__shop {
-  color: var(--title-color);
-}
-
-.dark-theme::-webkit-scrollbar {
-  background: hsl(0, 0%, 30%);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -316,8 +271,8 @@ body.dark-theme {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
-  box-shadow: 0 1px 4px hsla(0, 4%, 15%, .10);
+
+  box-shadow: 0 1px 4px rgba(70, 64, 64, 0.192);
 }
 
 /* Active link */
@@ -462,69 +417,77 @@ body.dark-theme {
 
 /*=============== UPDATE ===============*/
 .update__card{
-  background-color: var(--second-color);
-  padding: 1.25rem 1.5rem;
+  background-color: #E8CA9E;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .update__img{
   width: 60px;
-  border-radius: 3rem;
-  margin-bottom: 1rem;
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 
 .update__name{
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  margin-bottom: .25rem;
+  font-size: 35px;
+  font-weight: var(--font-bold);
+  margin-top: 25px;
+  text-align: left;
+  margin-left: 50px;
 }
 
 .update__description{
-  font-size: var(--small-font-size);
+  padding: 0 50px 30px;
+  font-size: var(--normal-font-size);
+  text-align: left;
 }
 
-
-/*SWIPER SLLIDE*/
-
-/*=============== STORY ===============*/
-.story__container {
-  row-gap: 7.5rem;
+.update__separator {
+  background-color: var(--body-color);
+  height: 7px;
 }
 
-.story__title {
-  font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-1);
+.swiper {
+  width: 100%;
+  height: 100%;
 }
 
-.story__description {
-  margin-bottom: var(--mb-2-5);
+.slide {
+  text-align: center;
+  font-size: 18px;
+  background: var(--first-color);
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.story__images {
-  position: relative;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.story__img, 
-.story__square {
-  width: 250px;
-}
-
-.story__square {
-  height: 250px;
-  background-color: var(--first-color);
-}
-
-.story__img {
-  position: absolute;
-  left: 3rem;
-  top: -3rem;
+.swiper-button-next, .swiper-button-prev {
+  color: var(--button-color);
+  margin: 700px 130px 0 130px;
 }
 
 /*=============== INFO ===============*/
 
 .info__container{
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .info__heading {
@@ -568,40 +531,6 @@ body.dark-theme {
   box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
 }
 
-/*=============== UPDATE ===============*/
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: var(--button-color);
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
 /*=============== NEWSLETTER ===============*/
 .newsletter__bg {
   background-color: var(--first-color);
@@ -633,7 +562,9 @@ body.dark-theme {
   padding: 1.25rem 1rem;
   color: hsl(0, 0%, 15%);
 }
-/*=============== VOLUNTEERING ===============*/
+
+
+/*=============== DONATION ===============*/
 
 .donation__container {
   padding: 7% 25%;
@@ -659,9 +590,6 @@ body.dark-theme {
   font-weight: var(--font-bold);
   font-size: var(--h3-font-size);
 }
-
-
-
 
 /*=============== FOOTER ===============*/
 
@@ -753,129 +681,15 @@ body.dark-theme {
 .show-scroll {
   bottom: 3rem;
 }
-
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
   width: .6rem;
-  background: hsl(0, 0%, 74%);
+  background: hsl(0, 11%, 86%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(0, 0%, 17%);
-}
-
-/*=============== CART ===============*/
-.cart {
-  position: fixed;
-  background-color: var(--body-color);
-  z-index: var(--z-fixed);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: -100%;
-  padding: 3.5rem 2rem;
-  transition: .4s;
-}
-
-.cart__title-center {
-  font-size: var(--h2-font-size);
-  text-align: center;
-  margin-bottom: var(--mb-3);
-}
-
-.cart__close {
-  font-size: 2rem;
-  color: var(--title-color);
-  position: absolute;
-  top: 1.25rem;
-  right: .9rem;
-  cursor: pointer;
-}
-
-.cart__container {
-  display: grid;
-  row-gap: 1.5rem;
-}
-
-.cart__card {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.cart__box {
-  background-color: var(--container-color);
-  padding: .75rem 1.25rem;
-  border: 1px solid var(--border-color);
-}
-
-.cart__img {
-  width: 50px;
-}
-
-.cart__title {
-  font-size: var(--normal-font-size);
-  margin-bottom: .5rem;
-}
-
-.cart__price {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--first-color);
-  margin-bottom: var(--mb-1-5);
-}
-
-.cart__amount,
-.cart__amount-content{
-  display: flex;
-  align-items: center;
-}
-
-.cart__amount{
-  column-gap: 3rem;
-}
-
-.cart__amount-content{
-  column-gap: 1rem;
-}
-
-.cart__amount-box {
-  display: inline-flex;
-  padding: .25rem;
-  background-color: var(--container-color);
-  border: 1px solid var(--border-color);
-  cursor: pointer;
-}
-
-.cart__amount-trash {
-  font-size: 1.15rem;
-  color: var(--first-color);
-  cursor: pointer;
-}
-
-.cart__prices {
-  margin-top: 6rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cart__prices-item, 
-.cart__prices-total {
-  color: var(--title-color);
-}
-
-.cart__prices-item {
-  font-size: var(--small-font-size);
-}
-
-.cart__prices-total {
-  font-size: var(--h3-font-size);
-  font-weight: var(--font-medium);
-}
-
-/* Show cart */
-.show-cart {
-  right: 0;
+  background: var(--second-color);
+  border-radius: 10px;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -885,7 +699,7 @@ body.dark-theme {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
-  .home__img-bg {
+  .home__img {
     width: 220px;
   }
   .home__title {
@@ -895,19 +709,7 @@ body.dark-theme {
     font-size: var(--smaller-font-size);
   }
 
-  .story__square,
-  .story__img,
-  .testimonial__square,
-  .testimonial__img {
-    width: 180px;
-  }
-
-  .story__square,
-  .testimonial__square {
-    height: 180px;
-  }
-
-  .products__container {
+  .volunteer__container {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
@@ -919,7 +721,7 @@ body.dark-theme {
     width: 340px;
   }
 
-  .featured__container {
+  .update__container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: flex-start;
