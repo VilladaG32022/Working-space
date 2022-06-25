@@ -46,7 +46,7 @@
   --z-fixed: 100;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (max-width: 990px) {
   :root {
     --biggest-font-size: 2.5rem;
     --h1-font-size: 2.25rem;
@@ -537,16 +537,18 @@ button {
   padding: 3rem 1.5rem;
   text-align: center;
   row-gap: 2.5rem;
+  border-radius: 10px;
 }
 
 .newsletter__title {
   font-size: var(--h1-font-size);
-  color: hsl(0, 0%, 15%);
+  font-weight: var(--font-bold);
+  color: var(--text-color);
   margin-bottom: var(--mb-1-5);
 }
 
 .newsletter__description {
-  color: hsl(0, 0%, 35%);
+  color: var(--button-color-alt);
 }
 
 .newsletter__subscribe {
@@ -561,8 +563,21 @@ button {
   background-color: hsl(0, 0%, 94%);
   padding: 1.25rem 1rem;
   color: hsl(0, 0%, 15%);
+  border-radius: 10px 0 0 10px;
 }
 
+.suscribe__button {
+  display: inline-block;
+  color: #FFF;
+  padding: 1.5rem 2.25rem;
+  transition: .3s;
+  border-radius: 1rem;
+  border-radius: 0 10px 10px 0;
+}
+
+.suscribe__button:hover {
+  background-color: var(--button-color-alt);
+}
 
 /*=============== DONATION ===============*/
 
@@ -601,6 +616,10 @@ button {
 .footer__container {
   background-color: var(--first-color);
   margin-bottom: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 0 280px 40px 280px;
 }
 
 .footer__line {
@@ -614,6 +633,23 @@ button {
 .footer__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
+}
+
+.footer__img {
+  width: 130px;
+}
+
+.footer__icon {
+  font-size: 2rem;
+  transition: .3s;
+}
+
+.footer__icon:hover {
+  color: var(--button-color-alt)
+}
+
+.footer__content {
+  text-align: center;
 }
 
 .footer__list, 
@@ -635,6 +671,7 @@ button {
 .footer__social {
   display: flex;
   column-gap: 1rem;
+  margin-top: 15px;
 }
 
 .footer__social-link {
