@@ -1,3 +1,4 @@
+/**/
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
   const header = document.getElementById('header')
