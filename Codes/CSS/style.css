@@ -85,6 +85,11 @@ body {
   transition: .4s;
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4 {
   color: var(--title-color);
   font-weight: var(--font-medium);
@@ -519,19 +524,6 @@ button {
   font-weight: bold;
 }
 
-.products__img {
-  height: 125px;
-  margin-bottom: var(--mb-1);
-}
-
-.products__button:hover {
-  background-color: var(--button-color-alt);
-}
-
-.products__card:hover {
-  box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
-}
-
 /*=============== NEWSLETTER ===============*/
 .newsletter__bg {
   background-color: var(--first-color);
@@ -737,28 +729,165 @@ button {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
-  .home__img {
-    width: 220px;
+
+  /* Home */
+
+  .home__container {
+    background-size: cover;
+    max-width: 100%;
+    padding: 2em;
   }
+  
   .home__title {
-    font-size: var(--h1-font-size);
+    /* font-size: var(--h1-font-size); */
+    font-size: 1.8em;
   }
+
+  .home__title__bold {
+    font-size: 2.5em;
+  }
+
+  .home__description {
+    margin: 0px;
+    margin-top: 2em;
+    width: 84%;
+  }
+
+  .home__btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    width: 100%;
+    justify-content: center;
+  }
+
   .home__button {
     font-size: var(--smaller-font-size);
+    margin: 0px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+
+  .home__button__two {
+    font-size: var(--smaller-font-size);
+    margin-bottom: 1em;
+    padding: 1em;
+    width: 40%;
+  }
+
+  .update__card {
+    width: 92%!important;
+    left: -.25%;
+  }
+
+  
+  .update__div {
+    width: 100%;
+  }
+
+  /* .swiper-button-next,
+  .swiper-button-prev {
+    top: 57%;
+  } */
+
+  .swiper-button-prev {
+    display: none;
+    left: -110px!important;
+  }
+
+  .swiper-button-next {
+    display: none;
+    right: -100px!important;
+  } 
+
+  /* Voluntariado */
+  
+  .volunteering__container {
+    display: block;
+    position: relative;
+    text-align: left;
+  }
+  
+  .volunteering__data {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #button_one {
+    height: fit-content;
+    margin: 0px;  
+    margin-bottom: 1em;
+    padding: .7em;
+    width: fit-content;
+  }
+
+  .volunteering__description {
+    font-size: .9em;
   }
 
   .volunteer__container {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
   }
+
+  /* Information */
+
+  .info__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info__heading {
+    padding: .5em;
+    font-size: 20px;
+  }
+
+  .info__box__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info__box {
+    font-size: 1em;
+    width: 45%;
+  }
+
+  /* dona */
+  .volunteering__description {
+    text-align: left;
+  }
+
+  /* Newsletter */
+  .newsletter__bg {
+    padding: 1.5em;
+  }
+
+  .newsletter__title {
+    font-size: 1.5em;
+  }
+
+  .newsletter__description {
+    text-align: left;
+  }
+
+  .newsletter__input {
+    width: 100%;
+  }
+
+  /* footer */
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px) {
-  .home__img-bg {
-    width: 340px;
-  }
-
+@media screen and (min-width: 350px) {
   .update__container {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
@@ -770,8 +899,6 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-@media screen and (min-width: 767px) {
   .section {
     padding: 8rem 0 1rem;
   }
@@ -807,10 +934,7 @@ button {
     grid-template-columns: 1fr max-content;
     align-items: center;
   }
-  .home__img-bg {
-    order: 1;
-    transform: translate(1.5rem, -6rem);
-  }
+
   .home__data {
     padding: 0 0 3rem 6rem;
   }
@@ -874,7 +998,6 @@ button {
   .footer__title {
     font-size: var(--h3-font-size);
   }
-}
 
 @media screen and (min-width: 992px) {
   .section__title {
@@ -883,10 +1006,6 @@ button {
 
   .home__container {
     column-gap: 2rem;
-  }
-  .home__img-bg {
-    width: 480px;
-    height: 680px;
   }
   .home__img {
     width: 420px;
@@ -959,3 +1078,4 @@ button {
     right: 3rem;
   }
 }
+
