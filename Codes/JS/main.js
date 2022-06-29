@@ -34,6 +34,31 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
+let swipervolunteering = new Swiper(".mySwipervolunteering", {
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 48,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 
 
 
